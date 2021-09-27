@@ -6,11 +6,11 @@ const DashboardSchema = new mongoose.Schema({
     required: true,
   },
   date: {
-    type: String,
-    required: true,
+    type: String
+    // required: true,
   },
   calories: {
-    type: String,
+    type: Number,
     required: true,
   },
   carbs: {

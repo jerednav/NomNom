@@ -10,6 +10,15 @@
 <body>
     <h1>Dashboard</h1>
   
+    <form action="/dashboard/createLog" method='POST'>
+        <input type="text" placeholder="Enter Food Name" name="foodName"><br>
+        <input type="text" placeholder="Enter Date" name='foodate'><br>
+        <input type="text" placeholder="Enter Calories" name='foodCalories'><br>
+        <input type="text" placeholder="Enter Carbs" name='foodProtein'><br>
+        <input type="text" placeholder="Enter Protein" name='foodCarbs'><br>
+        <input type="text" placeholder="Enter Fat" name='foodFat'><br>
+        <input type="submit" value="Log Food">
+    </form>
 
     <a href="/logout">Logout</a>
 

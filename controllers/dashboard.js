@@ -5,23 +5,29 @@ module.exports = {
         console.log(req.user)
         try{
             const food = await Dashboard.find({})
-            const calories = await Dashboard.countDocuments({userId:req.user.id,completed: false})
+            const calories = await Dashboard.find({})
             res.render('dashboard.ejs', {food: food, calories:calories})
         }catch(err){
             console.log(err)
         }
 
+    },
+    createLog: async (req, res)=>{
+        try{
+            await Dashboard.create({
+                food: req.body.foodName, 
+                date: req.body.foodDate,
+                calories: req.body.foodCalories,
+                carbs: req.body.foodCarbs,
+                protein: req.body.foodProtein,
+                fat: req.body.foodFat,
+            })
+            console.log('Food Log has been added!')
+            res.redirect('/dashboard')
+        }catch(err){
+            console.log(err)
+        }
     }
-    // ,
-    // createTodo: async (req, res)=>{
-    //     try{
-    //         await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
-    //         console.log('Todo has been added!')
-    //         res.redirect('/todos')
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // },
     // markComplete: async (req, res)=>{
     //     try{
     //         await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{

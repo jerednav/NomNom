@@ -5,7 +5,7 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 router.get('/', ensureAuth, dashboardController.getDashboard)
 
-// router.post('/createTodo', todosController.createTodo)
+router.post('/createLog', dashboardController.createLog)
 
 // router.put('/markComplete', todosController.markComplete)
 
