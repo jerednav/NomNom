@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
-const DashboardSchema = new mongoose.Schema({
+const PostSchema = new mongoose.Schema({
   food: {
     type: String,
     required: true,
   },
   date: {
-    type: String
+    type: String,
     // required: true,
   },
   calories: {
@@ -14,17 +14,17 @@ const DashboardSchema = new mongoose.Schema({
     required: true,
   },
   carbs: {
-    type: String,
+    type: Number,
     required: true,
   },
   protein: {
-    type: String,
+    type: Number,
     required: true,
   },
   fat: {
-    type: String,
+    type: Number,
     required: true
   }
 })
 
-module.exports = mongoose.model('Dashboard', DashboardSchema)
+module.exports = mongoose.model('Post', PostSchema)

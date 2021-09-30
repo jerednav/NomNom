@@ -1,33 +1,32 @@
-const Dashboard = require('../models/Dashboard')
+const Post = require('../models/Post')
 
 module.exports = {
     getDashboard: async (req,res)=>{
         console.log(req.user)
         try{
-            const food = await Dashboard.find({})
-            const calories = await Dashboard.find({})
-            res.render('dashboard.ejs', {food: food, calories:calories})
+            const post = await Post.find({})
+            res.render('dashboard.ejs', {postFood: post})
         }catch(err){
             console.log(err)
         }
 
-    },
-    createLog: async (req, res)=>{
-        try{
-            await Dashboard.create({
-                food: req.body.foodName, 
-                date: req.body.foodDate,
-                calories: req.body.foodCalories,
-                carbs: req.body.foodCarbs,
-                protein: req.body.foodProtein,
-                fat: req.body.foodFat,
-            })
-            console.log('Food Log has been added!')
-            res.redirect('/dashboard')
-        }catch(err){
-            console.log(err)
-        }
     }
+    // createLog: async (req, res)=>{
+    //     try{
+    //         await Dashboard.create({
+    //             food: req.body.foodName, 
+    //             date: req.body.foodDate,
+    //             calories: req.body.foodCalories,
+    //             carbs: req.body.foodCarbs,
+    //             protein: req.body.foodProtein,
+    //             fat: req.body.foodFat,
+    //         })
+    //         console.log('Food Log has been added!')
+    //         res.redirect('/dashboard')
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // }
     // markComplete: async (req, res)=>{
     //     try{
     //         await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{

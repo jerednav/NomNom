@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +11,26 @@
     <title>Nom Nom - Food/Recipe Tracker</title>
 </head>
 <body>
-    <style>
+    <header>
+        <%- include('../views/partials/header'); %>  
+    </header>
+
+    <!-- <style>
         body {
             background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1729&q=80')
         } 
-     </style>
+     </style> -->
     <h1>Start tracking your food today.</h1>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
+    <div class="container">
+        <div class="landingPageButton">
+            <form action="./login" method="GET">
+                <button type="submit">Log in</button>
+            </form>
+            <form action="./signup" method="GET">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
