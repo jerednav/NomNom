@@ -11,6 +11,7 @@ module.exports = {
         }
 
     }
+}
     // createLog: async (req, res)=>{
     //     try{
     //         await Dashboard.create({
@@ -59,4 +60,4 @@ module.exports = {
     //         console.log(err)
     //     }
     // }
-}    
+// }    

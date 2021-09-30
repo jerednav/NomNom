@@ -10,12 +10,13 @@ router.get('/post', ensureAuth, postController.getPost)
 
 router.post('/createPost', postController.createPost)
 
+router.delete('/deletePost', postController.deletePost)
+
 // router.post('/createLog', dashboardController.createLog)
 
 // router.put('/markComplete', todosController.markComplete)
 
 // router.put('/markIncomplete', todosController.markIncomplete)
 
-// router.delete('/deleteTodo', todosController.deleteTodo)
 
 module.exports = router;
