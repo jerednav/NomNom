@@ -7,4 +7,6 @@ router.get('/:id', ensureAuth, postController.getPost)
 
 router.post('/createPost', postController.createPost)
 
+router.delete('/deletePost', postController.deletePost)
+
 module.exports = router

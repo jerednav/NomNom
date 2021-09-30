@@ -31,7 +31,7 @@ module.exports = {
 deletePost: async (req, res)=>{
   console.log(req.body.notesIdFromJSFile)
   try{
-      await Notes.findOneAndDelete({_id:req.body.notesIdFromJSFile})
+      await Post.findOneAndDelete({_id:req.body.notesIdFromJSFile})
       console.log('Deleted Note')
       res.json('Deleted It')
   }catch(err){

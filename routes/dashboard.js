@@ -10,7 +10,7 @@ router.get('/post', ensureAuth, postController.getPost)
 
 router.post('/createPost', postController.createPost)
 
-router.delete('/deletePost', postController.deletePost)
+// router.delete('/deletePost', postController.deletePost)
 
 // router.post('/createLog', dashboardController.createLog)
 
